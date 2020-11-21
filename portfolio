@@ -1,0 +1,1850 @@
+Project #1: Python Syntax: Medical Insurance Project
+script.py
+# create the initial variables below
+age = 28
+smoker = 0
+sex = 1
+bmi = 26.2
+num_of_children = 3
+
+# Add insurance estimate formula below
+insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("This person's insurance cost is " + str(insurance_cost) + " dollars.")
+# Age Factor
+x = 4
+x += 2
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("The change in estimated insurance cost after increasing the age by 4 years is " + str(change_in_insurance_cost) + " dollars")
+# BMI Factor
+age = 28
+bmi = 26.2
+
+# Male vs. Female Factor
+
+
+# Extra Practice
+
+Project #2: Python Functions: Medical Insurance Peoject
+script.py
+# Create calculate_insurance_cost() function below: 
+def calculate_insurance_cost(name, age, sex, bmi, num_of_children, smoker):
+  estimated_cost = 50*age - 128*sex + 370*bmi + 425*num_of_children + 24000*smoker - 12500
+  print("The estimated insurance cost for this person is " +
+  str(estimated_cost) + " dollars.")
+  return estimated_cost
+
+# Initial variables for Maria 
+age = 28
+sex = 0  
+bmi = 26.2
+num_of_children = 3
+smoker = 0  
+
+# Estimate Maria's insurance cost
+maria_insurance_cost = calculate_insurance_cost(name = "Maria", age = 28, sex = 0, bmi = 26.2, num_of_children = 3, smoker = 0)
+
+print("The estimated insurance cost for Maria is " + str(insurance_cost) + " dollars.")
+
+# Initial variables for Omar
+
+
+# Estimate Omar's insurance cost 
+omar_insurance_cost = calculate_insurance_cost(name = "Omar", age = 35, sex = 1, bmi = 22.2, num_of_children = 0, smoker = 1)
+
+Project #3: Python Control Flow: Medical Insurance Project
+script.py
+# Add your code here
+def analyze_smoker(smoker_status):
+if smoker_status == 1:
+    print("To lower your cost, you should consider quitting smoking.")
+  else:
+    print("Smoking is not an issue for you.")
+# Function to estimate insurance cost:
+def estimate_insurance_cost(name, age, sex, bmi, num_of_children, smoker):
+  estimated_cost = 250*age - 128*sex + 370*bmi + 425*num_of_children + 24000*smoker - 12500
+  print(name + "'s Estimated Insurance Cost: " + str(estimated_cost) + " dollars.")
+  analyze_smoker(smoker)
+  analyze_bmi(bmi)
+  return estimated_cost
+ def analyze_bmi(bmi_value):
+if bmi_value > 30:
+    print("Your BMI is in the obese range. To lower your cost, you should significantly lower your BMI.")
+  elif bmi_value >= 25 and bmi_value <= 30:
+    print("Your BMI is in the overweight range. To lower your cost, you should lower your BMI.")
+  elif bmi_value >= 18.5 and bmi_value < 25:
+    print("Your BMI is in a healthy range.")
+  else:
+    print("Your BMI is in the underweight range. Increasing your BMI will not help lower your cost, but it will help improve your health.")
+# Estimate Keanu's insurance cost
+keanu_insurance_cost = estimate_insurance_cost(name = 'Keanu', age = 31, sex = 1, bmi = 26.4, num_of_children = 4, smoker = 0)
+
+Project #4: Python Lists: Medical Insurance Project
+script.py
+# Function to estimate insurance cost:
+def estimate_insurance_cost(name, age, sex, bmi, num_of_children, smoker):
+  estimated_cost = 250*age - 128*sex + 370*bmi + 425*num_of_children + 24000*smoker - 12500
+  print(name + "'s Estimated Insurance Cost: " + str(estimated_cost) + " dollars.")
+  return estimated_cost
+
+# Estimate Maria's insurance cost
+maria_insurance_cost = estimate_insurance_cost(name = "Maria", age = 31, sex = 0, bmi = 23.1, num_of_children = 1, smoker = 0)
+
+# Estimate Rohan's insurance cost
+rohan_insurance_cost = estimate_insurance_cost(name = 
+"Rohan", age = 25, sex = 1, bmi = 28.5, num_of_children = 3, smoker = 0)
+
+# Estimate Valentina's insurance cost
+valentina_insurance_cost = estimate_insurance_cost(name = "Valentina", age = 53, sex = 0, bmi = 31.4, num_of_children = 0, smoker = 1)
+
+# Add your code here
+names = ["Maria", "Rohan", "Valentina"]
+insurance_costs = [4150.0, 5320.0, 35210.0]
+insurance_data = list(zip(names, insurance_costs))
+estimated_insurance_data = []
+estimated_insurance_data.append(("Maria", maria_insurance_cost))
+estimated_insurance_data.append(("Rohan", rohan_insurance_cost))
+estimated_insurance_data.append(("Valentina", valentina_insurance_cost))
+print("Here is the estimated insurance cost data: " + str(estimated_insurance_data))
+print("Here is the actual insurance cost data: " + str(insurance_data))
+
+Project #5: Working with Python Lists: Medical Insurance Project
+script.py
+names = ["Mohamed", "Sara", "Xia", "Paul", "Valentina", "Jide", "Aaron", "Emily", "Nikita", "Paul"]
+insurance_costs = [13262.0, 4816.0, 6839.0, 5054.0, 14724.0, 5360.0, 7640.0, 6072.0, 2750.0, 12064.0]
+
+# Add your code here
+names.append("Priscilla")
+insurance_costs.append(8320.0)
+medical_records = list(zip(insurance_costs, names))
+print(medical_records)
+num_medical_records = len(medical_records)
+print("There are " + str(num_medical_records) + " medical records.")
+first_medical_record = medical_records[0]
+print("Here is the first medical record: " + str(first_medical_record))
+medical_records.sort()
+print("Here are the medical records sorted by insurance cost: " + str(medical_records))
+cheapest_three = medical_records[:3]
+print("Here are the three cheapest insurance costs in our medical records: " + str(cheapest_three))
+priciest_three = medical_records[-3:]
+print("Here are the three most expensive insurance costs in our medical records: " + str(priciest_three))
+occurrences_paul = names.count("Paul")
+print("There are " + str(occurrences_paul) + " individuals with the name Paul in our medical records.")
+
+Project #6: Python Loops: Medical Insurance Project
+script.py
+names = ["Judith", "Abel", "Tyson", "Martha", "Beverley", "David", "Anabel"]
+estimated_insurance_costs = [1000.0, 2000.0, 3000.0, 4000.0, 5000.0, 6000.0, 7000.0]
+actual_insurance_costs = [1100.0, 2200.0, 3300.0, 4400.0, 5500.0, 6600.0, 7700.0]
+
+# Add your code here
+total_cost = 0
+for insurance_cost in actual_insurance_costs: total_cost += insurance_cost
+average_cost = total_cost/len(actual_insurance_costs)
+print("Average insurance cost: " + str(average_cost) + " dollars.")
+for i in range(len(names)):
+ name = names[i]
+insurance_cost = actual_insurance_costs[i]
+  print("The insurance cost for " + name + " is " + str(insurance_cost) + " dollars.") 
+ # checks if insurance cost is above average
+  if insurance_cost > average_cost:
+    print("The insurance cost for " + name + " is above average.")
+
+  # checks if insurance cost is below average
+  elif insurance_cost < average_cost:
+    print("The insurance cost for " + name + " is below average.")
+
+  # checks if insurance cost is equal to the average
+  else:
+    print("The insurance cost for " + name + " is equal to the average.")
+   updated_estimated_costs = [estimated_cost * 11/10 for estimated_cost in estimated_insurance_costs] 
+ print(updated_estimated_costs)  
+
+Project #7: Python Strings: Medical Insurance Project
+script.py
+medical_data = \
+"""Marina Allison   ,27   ,   31.1 , 
+#7010.0   ;Markus Valdez   ,   30, 
+22.4,   #4050.0 ;Connie Ballard ,43 
+,   25.3 , #12060.0 ;Darnell Weber   
+,   35   , 20.6   , #7500.0;
+Sylvie Charles   ,22, 22.1 
+,#3022.0   ;   Vinay Padilla,24,   
+26.9 ,#4620.0 ;Meredith Santiago, 51   , 
+29.3 ,#16330.0;   Andre Mccarty, 
+19,22.7 , #2900.0 ; 
+Lorena Hodson ,65, 33.1 , #19370.0; 
+Isaac Vu ,34, 24.8,   #7045.0"""
+
+# Add your code here
+updated_medical_data = medical_data.replace("#", "$")
+print(updated_medical_data)
+num_records = 0
+for character in updated_medical_data:
+  if character == "$":
+    num_records += 1 
+    print("There are " + str(num_records) + " medical records in the data.")
+medical_data_split = updated_medical_data.split(";")
+print(medical_data_split)
+medical_records = []
+for record in medical_data_split:
+  medical_records.append(record.split(','))
+print(medical_records)
+medical_records_clean = []
+for record in medical_records:
+  record_clean = []
+  for item in record:
+    record_clean.append(item.strip())
+    medical_records_clean.append(record_clean)
+    print(medical_records_clean)
+    for record in medical_records_clean:
+      record[0] = record[0].upper()
+      print(record[0])
+      names = []
+      ages = []
+      bmis = []
+      insurance_costs = []
+  names.append(record[0])
+  ages.append(record[1])
+  bmis.append(record[2])
+  insurance_costs.append(record[3])
+  print("Names: " + str(names))
+print("Ages: " + str(ages))
+print("BMI: "  + str(bmis))
+print("Insurance Costs: " + str(insurance_costs))
+total_bmi = 0
+for bmi in bmis:
+  total_bmi += float(bmi)
+  average_bmi = total_bmi/len(bmis)
+print("Average BMI: " + str(average_bmi))
+
+Project #8: Python Dictionaries: Medical Insurance Project
+script.py
+# Add your code here
+medical_costs = {}
+
+medical_costs["Marina"] = 6607.0
+medical_costs["Vinay"] = 3325.0
+medical_costs.update({"Connie": 8886.0, "Isaac": 16444.0, "Valentina": 6420.0})
+print(medical_costs)
+total_cost = 0
+for cost in medical_costs.values():
+  total_cost += cost
+  average_cost = total_cost/len(medical_costs)
+  print("Average Insurance Cost: " +
+  str(average_cost))
+  names = ["Marina", "Vinay", "Connie", "Isaac", "Valentina"]
+  ages = [27, 24, 43, 35, 52]
+  zipped_ages = zip(names, ages)
+  names_to_ages = {key: value for key, value in zipped_ages}
+  print(names_to_ages)
+  marina_age = names_to_ages.get("Marina", None)
+  print("Marina's age is " +
+  str(marina_age))
+
+  medical_records = {}
+  medical_records["Marina"] = {"Age": 27, "Sex": "Female", "BMI": 31.1, "Children": 2, "Smoker": "Non-smoker", "Insurance_cost": 6607.0}
+  medical_records["Vinay"] = {"Age": 24, "Sex": "Male", "BMI": 26.9, "Children": 0, "Smoker": "Non-smoker", "Insurance_cost": 3225.0}
+medical_records["Connie"] = {"Age": 43, "Sex": "Female", "BMI": 25.3, "Children": 3, "Smoker": "Non-smoker", "Insurance_cost": 8886.0}
+medical_records["Isaac"] = {"Age": 35, "Sex": "Male", "BMI": 20.6, "Children": 4, "Smoker": "Smoker", "Insurance_cost": 16444.0}
+medical_records["Valentina"] = {"Age": 52, "Sex": "Female", "BMI": 18.7, "Children": 1, "Smoker": "Non-smoker", "Insurance_cost": 6420.0}
+print(medical_records)
+medical_records["Connie"]
+print("Connie's insurance cost is " + str(medical_records["Connie"]["Insurance_cost"]) + " dollars.")
+medical_records.pop("Vinay")
+for name, record in medical_records.items():
+  print(name + " is a " + str(record["Age"]) + \
+  " year old " + record["Sex"] + " " + record["Smoker"] \
+  + " with a BMI of " + str(record["BMI"]) + \
+  " and insurance cost of " + str(record["Insurance_cost"]))
+
+Project #9: Python Classes: Medical Insurance Project
+script.py
+class Patient:
+    def __init__(name, age):
+    self.name = name
+    self.age = age
+    # add more parameters here
+    def __init__(self, name, age, sex, bmi,    num_of_children, smoker):
+  self.name = name
+  self.age = age
+  self.sex = sex
+  self.bmi = bmi
+  self.num_of_children = num_of_children
+  self.smoker = smoker
+
+  patient1 = Patient("John Williams", 32, 1, 22.3, 0, 0)
+  print(patient1.name)
+  def estimated_insurance_cost(self):
+  estimated_cost = 250 * self.age - 128 * self.sex + 370 * self.bmi + 425 * self.num_of_children + 24000 * self.smoker - 12500
+  print(self.name + "'s estimated insurance cost is " + str(estimated_cost) + " dollars.")
+  def update_age(self, new_age):
+    self.age = new_age
+    print(self.name + " is now " +
+    str(self.age) + " years old.")
+    self.estimated_insurance_cost()
+    def update_num_children(self, new_num_children):
+      self.age = new_num_children
+      print(self.name + " has " +
+      str(self.num_of_children) + "children")
+      if self.num_of_children == 1:
+  print(self.name + " has " + str(self.num_of_children) + "child.")
+else:
+  print(self.name + " has " + str(self.num_of_chilrden) + "children.")
+  patient1.update_num_children(1)
+def patient_profile(self):
+  patient_information = {}
+  patient_information["Name"] = self.name
+  patient_information["Age"] = self.age
+  patient_information["Sex"] = self.sex
+  patient_information["BMI"] = self.bmi
+  patient_information["Number of Children"] = self.num_of_children
+  patient_information["Smoker"] = self.smoker
+  return patient_information
+  print(patient1.patient_profile())
+
+Project #10: Hacking the Fender
+script.py
+import csv
+import json
+compromised_users = []
+
+with open('passwords.csv') as password_file:
+  password_csv = csv.DictReader(password_file)
+  for password_row in password_csv:
+    compromised_users.append(password_row['Username'])
+
+with open('compromised_users.txt', 'w') as compromised_user_file:
+  for compromised_user in compromised_users:
+    compromised_user_file.write(compromised_user)
+
+with open('boss_message.json', 'w') as boss_message:
+  boss_message_dict = {
+    "recipient": "The Boss",
+    "message": "Mission Success"
+  }
+  json.dump(boss_message_dict, boss_message)
+
+with open('new_passwords.csv', 'w') as new_passwords_obj:
+  slash_null_sig = """
+    _  _     ___   __  ____             
+/ )( \   / __) /  \(_  _)            
+) \/ (  ( (_ \(  O ) )(              
+\____/   \___/ \__/ (__)             
+ _  _   __    ___  __ _  ____  ____  
+/ )( \ / _\  / __)(  / )(  __)(    \ 
+) __ (/    \( (__  )  (  ) _)  ) D ( 
+\_)(_/\_/\_/ \___)(__\_)(____)(____/ 
+        ____  __     __   ____  _  _ 
+ ___   / ___)(  )   / _\ / ___)/ )( \
+(___)  \___ \/ (_/\/    \\___ \) __ (
+       (____/\____/\_/\_/(____/\_)(_/
+ __ _  _  _  __    __                
+(  ( \/ )( \(  )  (  )               
+/    /) \/ (/ (_/\/ (_/\             
+\_)__)\____/\____/\____/
+"""
+new_passwords_obj.write(slash_null_sig)
+
+Project #11: New York Restaurants
+query-project.sqlite
+SELECT name,
+ CASE
+  WHEN review > 4.5 THEN 'Extraordinary'
+  WHEN review > 4 THEN 'Excellent'
+  WHEN review > 3 THEN 'Good'
+  WHEN review > 2 THEN 'Fair'
+  ELSE 'Poor'
+ END AS 'Review'
+FROM nomnom;
+
+Project #12: RPA Fraud Detection
+test.sqlite
+SELECT *
+FROM transaction_data
+LIMIT 10;
+
+SELECT full_name, email, zip
+FROM transaction_data
+WHERE zip = 20252;
+
+SELECT full_name, email
+FROM transaction_data
+WHERE full_name = 'Art Vandelay'
+   OR full_name LIKE '% der %';
+
+   SELECT ip_address, email
+FROM transaction_data
+WHERE ip_address LIKE '10.%';
+
+SELECT email
+FROM transaction_data
+WHERE email LIKE '%temp_email.com';
+
+SELECT *
+FROM transaction_data
+WHERE full_name LIKE 'John%'
+  AND ip_address LIKE '120.%';
+
+Project #13: RPA Customer Segmentation
+test.sqlite
+SELECT *
+ FROM users
+ LIMIT 20;
+
+ SELECT email, birthday
+ FROM users
+ WHERE birthday BETWEEN '1980-01-01' AND '1989-12-31';
+
+ SELECT email, created_at
+ FROM users
+ WHERE created_at < '2017-04-30';
+
+ SELECT email
+ FROM users
+ WHERE test = 'bears';
+
+ SELECT email
+ FROM users
+ WHERE campaign LIKE 'BBB%';
+
+ SELECT email
+ FROM users
+ WHERE campaign LIKE '%-2';
+
+ SELECT email
+ FROM users
+ WHERE campaign IS NOT NULL
+ AND test IS NOT NULL;
+
+Project #14: Davie's Burgers Subway Ad
+project.sqlite
+SELECT *
+ FROM orders
+ LIMIT 10;
+
+ SELECT DISTINCT order_date
+ FROM orders
+ ORDER BY order_date DESC;
+
+ SELECT special_instructions
+ FROM orders
+ WHERE special_instructions IS NOT NULL
+ ORDER BY special_instructions ASC;
+
+ SELECT special_instructions
+ FROM orders
+ WHERE special_instructions LIKE '%box%';
+
+ SELECT id, special_instructions
+ FROM orders
+ WHERE special_instructions LIKE '%box%';
+
+Project #15: Chocolate Scraping with Beautiful Soup
+script.py
+import codecademylib3_seaborn
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+webpage = requests.get("https://content.codecademy.com/courses/beautifulsoup/cacao/index.html")
+soup = BeautifulSoup("html.parser")
+print(soup)
+
+soup.find_all(attrs={"Rating": "ClassName"})
+
+ratings = []
+float(1)
+plt.hist(ratings)
+plt.show()
+soup.select(".Company")
+company_names = []
+for td in company_names[1:]:
+  companies.append(td.get_text())
+  d = {"Column 1 Name": column_1_list, "Column 2 Name": column_2_list}
+your_df = pd.DataFrame.from_dict(d)
+mean_vals = cacao_df.groupby("Company").Rating.mean()
+ten_best = mean_ratings.nlargest(10)
+print(ten_best)
+cocoa_percents = []
+cocoa_percent_tags = soup.select(".CocoaPercent")
+
+for td in cocoa_percent_tags[1:]:
+  percent = int(td.get_text().strip('%'))
+  cocoa_percents.append(percent)
+plt.scatter(df.CocoaPercentage, df.Rating)
+z = np.polyfit(df.CocoaPercentage, df.Rating, 1)
+line_function = np.poly1d(z)
+plt.plot(df.CocoaPercentage, line_function(df.CocoaPercentage), "r--")
+plt.show()
+
+Project #16: Petal Power Inventory
+script.py
+import codecademylib
+import pandas as pd
+
+inventory = pd.read_csv('inventory.csv')
+
+staten_island = inventory.head(10)
+product_request = staten_island.product_description
+seed_request = inventory[(inventory.location == "Brooklyn") & (inventory.product_type == "seeds")]
+inventory["in stock"] = inventory.apply(lambda row: True if row.quantity > 0 else False, axis = 1)
+inventory["total_value"] = inventory.apply(lambda row: row.price * row.quantity, axis = 1)
+combine_lambda = lambda row: \
+    '{} - {}'.format(row.product_type,
+                     row.product_description)
+inventory["full_description"] = inventory.apply(combine_lambda, axis = 1)                     
+print(inventory.head(10))
+
+Project #17: A/B Testing for Shoefly.com
+script.py
+import codecademylib
+import pandas as pd
+
+ad_clicks = pd.read_csv('ad_clicks.csv')
+print(ad_clicks.head())
+
+print(ad_clicks.groupby('utm_source')\
+    .user_id.count()\
+    .reset_index()
+)
+ad_clicks['is_click'] = ~ad_clicks\
+   .ad_click_timestamp.isnull()
+
+clicks_by_source = ad_clicks\
+   .groupby(['utm_source',
+             'is_click'])\
+   .user_id.count()\
+   .reset_index()
+
+   print(clicks_by_source)
+
+   clicks_pivot = clicks_by_source\
+   .pivot(index='utm_source',
+          columns='is_click',
+          values='user_id')\
+   .reset_index()
+
+  clicks_pivot['percent_clicked'] = \
+   clicks_pivot[True] / \
+   (clicks_pivot[True] + 
+    clicks_pivot[False])
+
+
+  print(clicks_pivot)
+
+  print(ad_clicks\
+  .groupby('experimental_group').user_id\
+  .count()\
+  .reset_index()
+  )
+
+  ad_clicks\
+  .groupby(['experimental_group', 'is_click']).user_id\
+  .count()\
+  .reset_index()\
+  .pivot(
+    index = 'experimental_group',
+    columns = 'is_click',
+    values = 'user_id'
+
+  )\
+  .reset_index()
+  a_clicks = ad_clicks[
+   ad_clicks.experimental_group
+   == 'A']
+   a_clicks = ad_clicks[
+   ad_clicks.experimental_group
+   == 'B']
+   a_clicks_pivot = a_clicks\
+   .groupby(['is_click', 'day']).user_id\
+   .count()\
+   .reset_index()\
+   .pivot(
+     index = 'day',
+     columns = 'is_click',
+     values = 'user_id'
+   )\
+   .reset_index()
+
+   a_clicks_pivot = ['percent_clicked'] = a_clicks_pivot[True] / (a_clicks_pivot[True] + a_clicks_pivot[False])
+
+   print(a_clicks_pivot)
+
+   b_clicks_pivot = b_clicks\
+   .groupby(['is_click', 'day']).user_id\
+   .count()\
+   .reset_index()\
+   .pivot(
+     index = 'day',
+     columns = 'is_click',
+     values = 'user_id'
+   )\
+   .reset_index()
+
+   b_clicks_pivot = ['percent_clicked'] = b_clicks_pivot[True] / (b_clicks_pivot[True] + b_clicks_pivot[False])
+
+   print(b_clicks_pivot)
+
+Project #18: Page Visits Funnel
+script.py
+import codecademylib
+import pandas as pd
+
+visits = pd.read_csv('visits.csv',
+                     parse_dates=[1])
+cart = pd.read_csv('cart.csv',
+                   parse_dates=[1])
+checkout = pd.read_csv('checkout.csv',
+                       parse_dates=[1])
+purchase = pd.read_csv('purchase.csv',
+                       parse_dates=[1])
+
+"""print(visits.head())
+print(cart.head())
+print(checkout.head())
+print(purchase.head())  """
+
+visits_cart = pd.merge(visits, cart, how = 'left')
+#print(visits_cart)
+visits_cart_rows = len(visits_cart)
+#print(visits_cart_rows)
+
+null_cart_times = len(visits_cart[visits_cart.cart_time.isnull()])
+#print(null_cart_times)
+print(float(null_cart_times) / visits_cart_rows)
+
+cart_checkout = pd.merge(cart, checkout, how = 'left')
+print(cart_checkout)
+
+cart_checkout_rows = len(cart_checkout)
+null_checkout_times = len(cart_checkout[cart_checkout.checkout_time.isnull()])
+
+print(float(null_checkout_times) / cart_checkout_rows)
+
+checkout_purchase = pd.merge(checkout, purchase, how = 'left')
+checkout_purchase_rows = len(checkout_purchase)
+null_purchase_times = len(checkout_purchase[checkout_purchase.purchase_time.isnull()])
+#print(float(null_purchase_items) / checkout_purchase_rows)
+
+all_data = visits\
+.merge(cart, how = 'left')\
+.merge(checkout, how = 'left')\
+.merge(purchase, how = 'left')
+all_data['time_to_purchase'] = \
+    all_data.purchase_time - \
+    all_data.visit_time
+#print(all_data.head())
+print(all_data.time_to_purchase)
+print(all_data.time_to_purchase.mean())
+
+Project #19: Cleaning US Census Data
+script.py
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as pyplot
+import codecademylib3_seaborn
+import glob
+
+files = glob.glob("us_census.csv")
+
+df_list = []
+for filemake in files:
+  data = pd.read_csv(filename)
+  df_list.append(data)
+  plt.scatter(the_women_column, the_income_column)
+  print(women)
+  new_df = old_df.drop_duplicates()
+
+Project #20: Central Tendancy for Housing Data
+script.py
+# Import packages
+import numpy as np
+import pandas as pd
+from scipy import stats
+
+# Read in housing data
+brooklyn_one_bed = pd.read_csv('brooklyn-one-bed.csv')
+brooklyn_price = brooklyn_one_bed['rent']
+
+manhattan_one_bed = pd.read_csv('manhattan-one-bed.csv')
+manhattan_price = manhattan_one_bed['rent']
+
+queens_one_bed = pd.read_csv('queens-one-bed.csv')
+queens_price = queens_one_bed['rent']
+
+#print(brooklyn_price)
+#print(manhattan_price)
+#print(queens_price)
+
+# Add mean calculations below 
+brooklyn_mean = np.average(brooklyn_price)
+manhattan_mean = np.average(manhattan_price)
+queens_mean = np.average(queens_price)
+
+
+# Add median calculations below
+brooklyn_median = np.median(brooklyn_price)
+manhattan_median = np.median(manhattan_price)
+queens_median = np.median(queens_price)
+
+
+# Add mode calculations below
+brooklyn_mode = stats.mode(brooklyn_price)
+manhattan_mode = stats.mode(manhattan_price)
+queens_mode = stats.mode(queens_price)
+
+
+
+
+
+
+
+##############################################
+##############################################
+##############################################
+
+
+
+
+
+
+
+# Don't look below here
+# Mean
+try:
+    print("The mean price in Brooklyn is " + str(round(brooklyn_mean, 2)))
+except NameError:
+    print("The mean price in Brooklyn is not yet defined.")
+try:
+    print("The mean price in Manhattan is " + str(round(manhattan_mean, 2)))
+except NameError:
+    print("The mean in Manhattan is not yet defined.")
+try:
+    print("The mean price in Queens is " + str(round(queens_mean, 2)))
+except NameError:
+    print("The mean price in Queens is not yet defined.")
+    
+    
+# Median
+try:
+    print("The median price in Brooklyn is " + str(brooklyn_median))
+except NameError:
+    print("The median price in Brooklyn is not yet defined.")
+try:
+    print("The median price in Manhattan is " + str(manhattan_median))
+except NameError:
+    print("The median price in Manhattan is not yet defined.")
+try:
+    print("The median price in Queens is " + str(queens_median))
+except NameError:
+    print("The median price in Queens is not yet defined.")
+    
+    
+#Mode
+try:
+    print("The mode price in Brooklyn is " + str(brooklyn_mode[0][0]) + " and it appears " + str(brooklyn_mode[1][0]) + " times out of " + str(len(brooklyn_price)))
+except NameError:
+    print("The mode price in Brooklyn is not yet defined.")
+try:
+    print("The mode price in Manhattan is " + str(manhattan_mode[0][0]) + " and it appears " + str(manhattan_mode[1][0]) + " times out of " + str(len(manhattan_price)))
+except NameError:
+    print("The mode price in Manhattan is not yet defined.")
+try:
+    print("The mode price in Queens is " + str(queens_mode[0][0]) + " and it appears " + str(queens_mode[1][0]) + " times out of " + str(len(queens_price)))
+except NameError:
+    print("The mode price in Queens is not yet defined.")
+
+Project #21: Variance in Weather
+script.py
+import codecademylib3_seaborn
+import pandas as pd
+import numpy as np
+from weather_data import london_data
+
+#print(london_data.head())
+#print(len(london_data))
+
+temp = london_data["TemperatureC"]
+average_temp = np.mean(temp)
+temperature_var = np.var(temp)
+temperature_standard_deviation = np.std(temp)
+#print(average_temp)
+#print(temperature_var)
+#print(temperature_standard_deviation)
+
+june = london_data.loc[london_data["month"] == 6]["TemperatureC"]
+july = london_data.loc[london_data["month"] == 7]["TemperatureC"]
+print(np.mean(june))
+print(np.mean(july))
+print(np.std(june))
+print(np.std(july))
+
+for i in range(1, 13):
+  month = london_data.loc[london_data["month"] == i]["TemperatureC"]
+  print("The mean temperature in month "+str(i) +" is "+ str(np.mean(month)))
+  print("The standard deviation of temperature in month "+str(i) +" is "+ str(np.std(month)) +"\n")
+
+Project #22: Traveling to Acadia
+script.py
+# import codecademylib3
+import codecademylib3
+import numpy as np
+from matplotlib import pyplot as plt
+
+# load in data
+in_bloom = np.loadtxt(open("in-bloom.csv"), delimiter=",")
+flights = np.loadtxt(open("flights.csv"), delimiter=",")
+
+# Plot the histograms
+plt.figure(1)
+plt.subplot(211)
+plt.hist(flights, range=(0, 365), bins=365, edgecolor='black')
+plt.title("Annual Frequency of Visitors")
+plt.xlabel("Days (1 Day increments")
+plt.ylabel("Count")
+
+plt.subplot(212)
+plt.hist(in_bloom, range=(0, 365), bins=365)
+
+plt.title("Flower Blooms by Week")
+plt.xlabel("Weeks (1 week increments")
+plt.ylabel("Bloom Count")
+
+plt.tight_layout()
+
+plt.show()
+
+Project #23: Describe Exam Grade Distributions
+summary.txt
+On exam 1, the average and median scores were 80 and 80, respectively. The distribution is symmetric, with a similar distribution of scores to the left and right of the center.
+
+The range is close to 35, with the lowest grade close to 55 and the largest grade close to 90. There is one student, who scored close to 55, who is considered an outlier.
+
+#####################
+#####################
+
+On exam 2, the average and median scores were 82 and 84, respectively. The distribution has a left skew, which agrees with our finding that the average of our dataset is smaller than the median.
+
+The range is close to 38, with the lowest grade close to 60 and the largest grade close to 98.
+
+#####################
+#####################
+
+On exam 3, the average and median scores were 77 and 80, respectively. The distribution is bi-modal, and both modes have a similar tail on both sides of their peak, indicating that each is symmetric.
+
+The range is close to 42, with the lowest grade close to 56 and the largest grade close to 98.
+
+
+#####################
+#####################
+
+
+On the final exam, the average and median scores were 80 and 80, respectively. The distribution is symmetric, with a similar distribution of scores to the left and right of the center.
+
+The range is close to 30, with the lowest grade close to 68 and the largest grade close to 98. There is one student, who scored close to 98, that is considered an outlier.
+
+Project #24: Life Expectancy by Country
+script.py
+import codecademylib3_seaborn
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = pd.read_csv("country_data.csv")
+#print(data.head)
+life_expectancy =  data["Life Expectancy"]
+life_expectancy_quartiles = np.quantile(ages, [0.25, 0.5, 0.75])
+
+
+
+gdp = data["Money"]
+median_gdp = np.quantile(gdp, 0.5)
+low_gdp = data[data['GDP'] > median_gdp]
+low_gdp_quartiles = np.quantile(low_gdp["Life Expectancy"], [45, 48, 57])
+high_gdp_quartiles = np.quantile(high_gdp["Life Expectancy"])
+
+plt.hist(high_gdp["Life Expectancy"], alpha = 0.5, label = "High GDP")
+plt.hist(low_gdp["Life Expectancy"], alpha = 0.5, label = "Low GDP")
+plt.legend()
+plt.show()
+
+Project #25: Healthcare in Different States
+script.py
+import codecademylib3_seaborn
+import pandas as pd
+from matplotlib import pyplot as plt
+
+healthcare = pd.read_csv("healthcare.csv")
+#print(healthcare.head())
+#print(healthcare["DRG Definition"].unique())
+
+chest_pain = healthcare[healthcare['DRG Definition'] == '313 - CHEST PAIN']
+#print(chest_pain)
+alabama_chest_pain = chest_pain[chest_pain['Provider State'] == "AL"]
+#print(alabama_chest_pain)
+costs = alabama_chest_pain['Average Covered Charges'].values
+#print(costs)
+#plt.boxplot(costs)
+#plt.show()
+
+states = chest_pain["Provider State"].unique()
+#print(states)
+
+datasets = []
+for state in states:
+  datasets.append(chest_pain[chest_pain['Provider State'] == state][' Average Covered Charges '].values)
+
+  plt.figure(figsize=(20, 6))
+  plt.boxplot(datasets, labels = states)
+  plt.show()
+
+Project #26: Familiar: A Study in Data Analysis
+script.py
+import familiar
+from scipy.stats import ttest_1samp
+from scipy.stats import chi2_contingency
+
+vein_pack_lifespans = familiar.lifespans(package='vein')
+vein_pack_test = ttest_1samp(vein_pack_lifespans, 71)
+print (vein_pack_test.pvalue, '0.10f')
+
+if vein_pack_test.pvalue < 0.05:
+  print('The Vein Pack Is Proven To Make You Live Longer!')
+else:
+  print('The Vein Pack Is Probably Good For You Somehow!')
+
+artery_pack_lifespans = familiar.lifespans(package='artery')
+package_comparison_results = ttest_ind(vein_pack_lifespans, artery_pack_lifepans)
+
+if vein_pack_test.pvalue < 0.05:
+  print('The Artery Package guarantees even stronger results!')
+else:
+  print('the Artery Package is also a great product!')
+
+  iron_contingency_table = familiar.iron_counts_for_package()
+  print iron_contingency_table
+
+  _, iron_pvalue, _, _ = chi2_contingency(iron_contingency_table)
+
+  if vein_pack_test.pvalue < 0.05:
+  print('The Artery Package Is Proven To Make You Healthier!')
+else:
+  print('While We Can’t Say The Artery Package Will Help You, I Bet It’s Nice!')
+
+Project #27: Fetchmaker
+script.py
+import numpy as np
+import fetchmaker
+from scipy.stats import binom_test
+from scipy.stats import f_oneway
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+rottweiler_tl = fetchmaker.get_tail_length("rottweiler")
+print np.mean(rottweiler_tl)
+print np.std(rottweiler_tl)
+
+whippet_rescue = fetchmaker.get_is_rescue("whippet")
+num_whippet_rescues = np.count_nonzero(whippet_rescue)
+num_whippets = np.size(whippet_rescue)
+print binom_test(num_whippet_rescues, num_whippets, .08)
+
+w = fetchmaker.get_weight("whippet")
+t = fetchmaker.get_weight("terrier")
+p = fetchmaker.get_weight("pitbull")
+print f_oneway (w, t, p).pvalue
+values = np.concatenate([w, t, p])
+labels = ['whippet'] * len(w) + ['terrier'] *len(t) + ['pitbull'] * len(p)
+
+print pairwise_tukeyhsd(values, labels, .05)
+
+poodle_colors = fetchmaker.get_color("poodle")
+shihtzu_colors = fetchmaker.get_color("shihtzu")
+
+color_table = [
+  [
+    np.count_nonzero(poodle_colors == "black")
+    np.count_nonzero(shihtzu_colors == "black")
+  ],
+  [
+    np.count_nonzero(poodle_colors == "brown")
+    np.count_nonzero(shihtzu_colors == "brown")
+  ],
+  [
+    np.count_nonzero(poodle_colors == "gold")
+    np.count_nonzero(shihtzu_colors == "gold")
+  ],
+  [
+    np.count_nonzero(poodle_colors == "grey")
+    np.count_nonzero(shihtzu_colors == "grey")
+  ],
+  [
+    np.count_nonzero(poodle_colors == "white")
+    np.count_nonzero(shihtzu_colors == "white")
+  ]
+]
+print color_table
+
+Project #28: A/B Testing at Nosh Mish Mosh
+script.py
+import noshmishmosh
+import numpy as np
+
+all_visitors= noshmishmosh.customer_visits
+paying_visitors = noshmishmosh.purchasing_customers
+total_visitor_count = len(all_visitors)
+paying_visitor_count = len(paying_visitors)
+baseline_percent = paying_visitor_count / total_visitor_count * 100
+print(baseline_percent)
+payment_history = noshmishmosh.money_spent
+average_payment = np.mean(payment_history)
+new_customers_needed = np.ceil(1240 / average_payment)
+percentage_point_increase = new_customers_needed / total_visitor_count * 100
+lift = percentage_point_increase / baseline_percent * 100
+print(lift)
+
+Project #29: Sublime Limes' Line Graph
+script.py
+import codecademylib
+from matplotlib import pyplot as plt
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+visits_per_month = [9695, 7909, 10831, 12942, 12495, 16794, 14161, 12762, 12777, 12439, 10309, 8724]
+
+# numbers of limes of different species sold each month
+key_limes_per_month = [92.0, 109.0, 124.0, 70.0, 101.0, 79.0, 106.0, 101.0, 103.0, 90.0, 102.0, 106.0]
+persian_limes_per_month = [67.0, 51.0, 57.0, 54.0, 83.0, 90.0, 52.0, 63.0, 51.0, 44.0, 64.0, 78.0]
+blood_limes_per_month = [75.0, 75.0, 76.0, 71.0, 74.0, 77.0, 69.0, 80.0, 63.0, 69.0, 73.0, 82.0]
+
+
+# create your figure here
+plt.figure(figsize=(12, 8))
+
+ax1 = plt.subplot(1, 2, 1)
+x_values = range(len(months))
+plt.plot(x_values, visits_per_month, marker = 'o')
+plt.xlabel('month')
+plt.ylabel('visitors')
+ax1.set_xticks(x_values)
+ax1.set_xticklabels(months)
+ax2 = plt.subplot(1, 2, 2)
+plt.plot(x_values, key_limes_per_month, color = 'green')
+plt.plot(x_values, persian_limes_per_month, color = 'orange')
+plt.plot(x_values, blood_limes_per_month, color = 'purple')
+plt.legend(['key limes', 'persian limes', 'blood limes'])
+plt.xlabel('month')
+plt.ylabel('limes sold')
+ax2.set_xticks(x_values)
+ax2.set_xticklabels(months)
+plt.title("Lime Sales per Month")
+
+plt.show()
+plt.savefig("sublime_lime_graphs.png")
+
+Project #30: Twitch Part 1: Analyze Data with SQL
+test.sqlite
+SELECT *
+FROM stream
+JOIN chat
+ON stream.device_id = chat.device_id;
+
+Project #31: Twitch Part 2: Visualize Data with Matplotlib
+script.py
+import codecademylib3_seaborn
+from matplotlib import pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Bar Graph: Featured Games
+
+games = ["LoL", "Dota 2", "CS:GO", "DayZ", "HOS", "Isaac", "Shows", "Hearth", "WoT", "Agar.io"]
+
+viewers =  [1070, 472, 302, 239, 210, 171, 170, 90, 86, 71]
+
+plt.bar(range(len(games)), viewers, color='slateblue')
+plt.title('Featured Games Viewers')
+plt.legend(["Twitch"])
+plt.xlabel('Games')
+plt.ylabel('Viewers')
+
+ax = plt.subplot()
+ax.set_xticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+ax.set_xticklabels(games, rotation=30)
+plt.show()
+plt.clf()
+
+
+
+
+# Pie Chart: League of Legends Viewers' Whereabouts
+
+labels = ["US", "DE", "CA", "N/A", "GB", "TR", "BR", "DK", "PL", "BE", "NL", "Others"]
+
+countries = [447, 66, 64, 49, 45, 28, 25, 20, 19, 17, 17, 279]
+
+colors = ['lightskyblue', 'gold', 'lightcoral', 'gainsboro', 'royalblue', 'lightpink', 'darkseagreen', 'sienna', 'khaki', 'gold', 'violet', 'yellowgreen']
+
+explode = (0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+plt.pie(countries, explode=explode, colors=colors, shadow=True, startangle=345, autopct='%1.0f%%', pctdistance=1.15)
+
+plt.title("League of Legends Viewers' Whereabouts")
+
+plt.legend(labels, loc="right")
+
+plt.show()
+plt.clf()
+
+# Line Graph: Time Series Analysis
+
+hour = range(24)
+
+viewers_hour = [30, 17, 34, 29, 19, 14, 3, 2, 4, 9, 5, 48, 62, 58, 40, 51, 69, 55, 76, 81, 102, 120, 71, 63]
+
+
+
+plt.title("Time Series")
+
+plt.xlabel("Hour")
+plt.ylabel("Viewers")
+
+
+plt.plot(hour, viewers_hour)
+
+plt.legend(['2015-01-01'])
+
+ax = plt.subplot()
+
+ax.set_xticks(hour)
+ax.set_yticks([0, 20, 40, 60, 80, 100, 120, 140])
+
+y_upper = [i + (i*0.15) for i in viewers_hour]
+y_lower = [i - (i*0.15) for i in viewers_hour]
+
+plt.fill_between(hour, y_lower, y_upper, alpha=0.2)
+
+
+plt.show()
+
+Project #32: Visualizing World Cup Data with Seaborn
+script.py
+import codecademylib3_seaborn
+from matplotlib import pyplot as plt
+import pandas as pd
+import seaborn as sns
+
+df = pd.read_csv('WorldCupMatches.csv')
+df_goals = pd.read_csv('goals.csv')
+df['Total Goals'] = df['Home Team Goals'] + df['Away Team Goals']
+
+sns.set_style('whitegrid')
+sns.set_content('notebook', font_scale=1.25)
+f, ax = plt.subplots(figsize=(12, 7))
+ax = sns.barplot(x=df['Year'], y=df['Total Goals'])
+
+ax.set_title('Avg goals set per year in World Cup')
+
+plt.show()
+f, ax2 = plt.subplots(figsize=(12, 7))
+ax2 = sns.boxplot(x='year', y='goals', data=df_goals, palette='Spectral')
+ax2.set_title('Goals Visualiztion')
+
+plt.show()
+
+Project #33: Mystery Friend
+script.py
+from goldman_emma_raw import goldman_docs
+from henson_matthew_raw import henson_docs
+from wu_tingfang_raw import wu_docs
+# import sklearn modules here:
+from sklearn.feature_extraction_text import CountVectorizer
+from sklearn.naive_bayes import MultinomiaNB
+bow_vectorizer = CountVectorizer()
+bow_vectorizer = friends_vectors.fit_transform(friends_docs)
+mystery_vector = mystery_postcard.transform(mystery_postcards)
+# Setting up the combined list of friends' writing samples
+friends_docs = goldman_docs + henson_docs + wu_docs
+# Setting up labels for your three friends
+friends_labels = [1] * 154 + [2] * 141 + [3] * 166
+some_friend_docs[32]
+friends_classifier = MultinomiaNB()
+friends_classifier.fit(friends_vectors, friends_labels)
+predictions = predictions.predict(mystery_vector)
+#Print out a document from each friend:
+print(goldman_docs)
+print(henson_docs)
+print(wu_docs)
+
+
+
+mystery_postcard = """
+My friend,
+From the 10th of July to the 13th, a fierce storm raged, clouds of
+freeing spray broke over the ship, incasing her in a coat of icy mail,
+and the tempest forced all of the ice out of the lower end of the
+channel and beyond as far as the eye could see, but the _Roosevelt_
+still remained surrounded by ice.
+Hope to see you soon.
+"""
+
+# Create bow_vectorizer:
+
+# Define friends_vectors:
+
+# Define mystery_vector: 
+
+
+# Define friends_classifier:
+
+# Train the classifier:
+
+# Change predictions:
+predictions = ["None Yet"]
+
+mystery_friend = predictions[0] if predictions[0] else "someone else"
+
+# Uncomment the print statement:
+#print("The postcard was from {}!".format(mystery_friend))
+
+Project #34: Read the News Analysis
+script.py
+import codecademylib3_seaborn
+import pandas as pd
+import numpy as np
+from articles import articles
+from preprocessing import preprocess_text
+
+# import CountVectorizer, TfidfTransformer, TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer, TfidfVectorizer
+
+# view article
+print(articles[1])
+
+# preprocess articles
+processed_docs = list()
+for document in articles:
+  processed_docs.append(preprocess_text(document))
+
+
+# initialize and fit CountVectorizer
+my_vectorizer = CountVectorizer()
+word_counts = my_vectorizer.fit_transform(articles)
+
+# convert counts to tf-idf
+my_transformer = TfidfTransformer(norm=None)
+
+
+# initialize and fit TfidfVectorizer
+tfidf_scores_transformed = my_transformer.fit_transform(word_counts)
+my_vectorizer = TfidfVectorizer(norm=None)
+
+# check if tf-idf scores are equal
+tfidf_scores = my_vectorizer.fit_transform(articles)
+if np.allclose(tfidf_scores_transformed.todense(), tfidf_scores.todense()):
+  print(pd.DataFrame({'Are the tf-idf scores the same?':['YES']}))
+else:
+  print(pd.DataFrame({'Are the tf-idf scores the same?':['No, something is wrong :(']}))
+
+
+
+# get vocabulary of terms
+try:
+  feature_names = vectorizer.get_feature_names()
+except:
+  pass
+
+# get article index
+try:
+  article_index = [f"Article {i+1}" for i in range(len(articles))]
+except:
+  pass
+
+# create pandas DataFrame with word counts
+try:
+  df_word_counts = pd.DataFrame(counts.T.todense(), index=feature_names, columns=article_index)
+  print(df_word_counts)
+except:
+  pass
+
+# create pandas DataFrame(s) with tf-idf scores
+try:
+  df_tf_idf = pd.DataFrame(tfidf_scores_transformed.T.todense(), index=feature_names, columns=article_index)
+  print(df_tf_idf)
+except:
+  pass
+
+try:
+  df_tf_idf = pd.DataFrame(tfidf_scores.T.todense(), index=feature_names, columns=article_index)
+  print(df_tf_idf)
+except:
+  pass
+
+# get highest scoring tf-idf term for each article
+for i in range(start, stop)
+print(df_tf_idf[[f'Article {i}']].idxmax())
+
+Project #35: U.S.A. Presidential Vocabulary
+script.py
+import os
+import gensim
+import spacy
+from president_helper import read_file, process_speeches, merge_speeches, get_president_sentences, get_presidents_sentences, most_frequent_words
+
+# get list of all speech files
+files = sorted([file for file in os.listdir() if file[-4:] == '.txt'])
+print(files)
+
+result = [read_file(item) for item in files]
+
+
+# preprocess each speech
+result = process_speeches(speeches)
+
+
+# merge speeches
+processed_speeches = merge_speeches(all_sentences)
+
+
+# view most frequently used words
+most_freq_words = most_frequent_words(all_sentences)
+
+
+# create gensim model of all speeches
+all_prez_embedding = gensim.models.Word2Vec(all_sentences, size=96, window=5, min_count=1, workers=2, sg=1)
+
+# view words similar to freedom
+similar_to_freedom = my_word_embedding_model.most_similar("freedom", topn=20)
+print(similar_to_freedom)
+
+
+# get President Roosevelt sentences
+roosevelt_sentences = get_president_sentences("franklin-d-roosevelt")
+
+
+# view most frequently used words of Roosevelt
+roosevelt_most_freq_words = most_freq_words(roosevelt_sentences)
+print(roosevelt_most_freq_words)
+
+
+# create gensim model for Roosevelt
+roosevelt_embeddings = gensim.models.Word2Vec(roosevelt_sentences, size=96, window=5, min_count=1, workers=2, sg=1)
+
+# view words similar to freedom for Roosevelt
+roosevelt_similar_to_freedom = my_word_embedding_model.most_similar("freedom", topn=20)
+print(roosevelt_similar_to_freedom)
+
+
+# get sentences of multiple presidents
+rushmore_prez_sentences = get_presidents_sentences(["washington","jefferson","lincoln","theodore-roosevelt"])
+
+
+# view most frequently used words of presidents
+rushmore_most_freq_words = most_frequent_words(rushmore_prez_sentences)
+print(rushmore_most_freq_words)
+
+
+rushmore_embeddings = gensim.models.Word2Vec(rushmore_sentences, size=96, window=5, min_count=1, workers=2, sg=1)
+
+# view words similar to freedom for presidents
+rushmore_similar_to_freedom = my_word_embedding_model.most_similar("freedom", topn=20)
+
+Project #36: Honey Production
+script.py
+import codecademylib3_seaborn
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import linear_model
+
+df = pd.read_csv("https://content.codecademy.com/programs/data-science-path/linear_regression/honeyproduction.csv")
+
+prod_per_year = df.groupby('year').totalprod.mean().reset_index()
+#print(prod_per_year)
+
+X = prod_per_year['year']
+X = X.values.reshape(-1, 1)
+#print(X)
+
+y = prod_per_year['totalprod']
+#print(y)
+
+plt.scatter(X, y)
+plt.show()
+
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+#print(regr.coef_[0])
+#print(regr.intercept_)
+
+y_predict = regr.predict(X)
+
+plt.plot(X, y_predict)
+#plt.show()
+
+X_future = np.array(range(2013, 2050))
+X_future = X_future.reshape(-1, 1)
+print(X_future)
+
+future_predict = regr.predict(X_future)
+
+plt.plot(future_predict, X_future)
+plt.show()
+
+Project #37: Breast Cancer Classifier
+script.py
+import codecademylib3_seaborn
+from sklearn.datasets import load_breast_cancer
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+import matplotlib.pyplot as plt
+
+breast_cancer_data = load_breast_cancer()
+
+#print(breast_cancer_data.data[0])
+#print(breast_cancer_data.feature_names)
+
+#print(breast_cancer_data.target)
+#print(breast_cancer_data.target_names)
+
+training_data, validation_data, training_labels, validation_labels = train_test_split(breast_cancer_data.data, breast_cancer_data.target, test_size = 0.2, random_state = 100)
+
+classifier = KNeighborsClassifier(n_neighbors = 3)
+
+accuracies= []
+for k in range(1, 101):
+ classifier = KNeighborsClassifier(n_neighbors=k)
+ classifier.fit(training_data, training_labels)
+ accuracies.append(classifier.score(validation_data, validation_labels))
+
+k_list = range(1, 101)
+plt.plot(k_list, accuracies)
+plt.xlabel("k")
+plt.ylabel("Validation Accuracy")
+plt.title("Breast Cancer Classifier Accuracy")
+
+
+plt.show()
+
+Project #38: Predict Titanic Survival
+script.py
+import codecademylib3_seaborn
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Load the passenger data
+passengers = pd.read_csv('passengers.csv')
+
+# Update sex column to numerical
+passengers['Sex'] = passengers['Sex'].map({'male': 0, 'female': 1})
+
+# Fill the nan values in the age column
+passengers['Age'].fillna(inplace=True, value=passengers['Age'].mean())
+
+
+# Create a first class column
+passengers['FirstClass'] = passengers['Pclass'].apply(lambda p: 1 if p == 1 else 0)
+
+# Create a second class column
+passengers['SecondClass'] = passengers['Pclass'].apply(lambda p: 1 if p == 2 else 0)
+print(passengers)
+# Select the desired features
+features = passengers[['Sex', 'Age', 'FirstClass', 'SecondClass']]
+survival = passengers['Survived']
+
+# Perform train, test, split
+train_features, test_features, train_labels, test_labels = train_test_split(features, survival)
+
+# Scale the feature data so it has mean = 0 and standard deviation = 1
+scaler = StandardScaler()
+train_features = scaler.fit_transform(train_features)
+test_features = scaler.transform(test_features)
+
+# Create and train the model
+model = LogisticRegression()
+model.fit(train_features, train_labels)
+
+# Score the model on the train data
+print(model.score(train_features, train_labels))
+
+# Score the model on the test data
+print(model.score(test_features, test_labels))
+print(model.coef_)
+# Analyze the coefficients
+
+
+# Sample passenger features
+Jack = np.array([0.0,20.0,0.0,0.0])
+Rose = np.array([1.0,17.0,1.0,0.0])
+You = np.array([0.0,35.0,0.0,0.0])
+
+# Combine passenger arrays
+combined_arrays = np.array([Jack, Rose, You])
+
+# Scale the sample passenger features
+sample_passengers = scaler.transform(sample_passengers)
+
+# Make survival predictions!
+print(model.predict(sample_passengers))
+print(model.predict_proba(sample_passengers))
+
+Project #39: Dr. Dirac's Statistics Midterm
+script.py
+import numpy as np
+
+#P(A|B) = P(knows the material | answers correctly)
+
+#P(A) = P(knows the material) = 0.6
+#P(B) = P(answers correctly) = 0.59
+
+#P(B|A) = P(answers correctly | knows the material) = 0.85
+
+#P(answers correctly | knows the material) * P(knows the material) OR (+)
+#P(answers correctly | does not know the material)
+#P(A|B) = P(B|A) * P(A) / P(B)
+p_knows_given_answers_correctly = 0.85 * 0.6 / 0.59
+print(p_knows_given_answers_correctly)
+
+Project #40: Email Similarity
+script.py
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.feature_extraction.text import CountVectorizer
+
+train_emails = fetch_20newsgroups(categories = ['comp.sys.ibm.pc.hardware','rec.sport.hockey'],
+subset = 'train',
+shuffle = True,
+random_state = 108
+)
+#print(emails.target_names)
+#print(emails.data[5])
+#print(emails.target[5])
+test_emails = fetch_20newsgroups(categories = ['comp.sys.ibm.pc.hardware','rec.sport.hockey'],
+subset = 'test',
+shuffle = True,
+random_state = 108
+)
+
+counter = CountVectorizer()
+counter.fit(test_emails.data + train_emails.data)
+
+train_counts = counter.transform(train_emails.data)
+test_counts = counter.transform(test_emails.data)
+
+classifier = MultinomialNB()
+classifier.fit(train_counts, train_emails.target)
+print(classifier.score(test_counts, test_emails.target))
+
+Project #41: Sports Vector Machine
+script.py
+import codecademylib3_seaborn
+import matplotlib.pyplot as plt
+from sklearn.svm import SVC
+from sklearn.model_selection import train_test_split
+from svm_visualization import draw_boundary
+from players import aaron_judge, jose_altuve, david_ortiz
+
+fig, ax = plt.subplots()
+
+def find_strike_zone(data_set):
+data_set.type = data_set.type.map({'S': 1, 'B': 0})
+
+
+data_set = data_set.dropna(subset = ['type', 'plate_x', 'plate_z'])
+#print(aaron_judge.plate_z)
+
+plt.scatter(x=data_set.plate_x, y=data_set.plate_z, c=data_set.type, cmap=plt.cm.coolwarm, alpha=0.25)
+
+training_set, validation_set = train_test_split(data_set, random_state=1)
+
+largest = {'value': 0, 'gamma': 1, 'C': 1}
+for gamma in range(1, 5):
+  for C in range (1, 5):
+classifier = SVC(kernel = 'rbf', gamma=100, C=100) 
+  classifier.fit(training_set[['plate_x', 'plate_z']], 
+training_set.type)
+score = classifier.score(validation_set[['plate_x', 'plate_z']], 
+validation_set.type)
+
+if(score > largest['value']):
+  largest['value'] = score
+  largest['gamma'] = gamma
+  largest['C'] = C
+
+print(largest)
+draw_boundary(ax, clasifier)
+ax.set_ylim(-2, 6)
+ax.set_xlim(-3, 3)
+
+  plt.show()
+
+  find_strike_zone(david_ortiz)
+
+Project #42: Find the Flag
+script.py
+import codecademylib3_seaborn
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+import matplotlib.pyplot as plt
+
+flags = pd.read_csv("flags.csv", header = 0)
+print(flags.columns)
+print(flags.head())
+
+labels = flags[["Landmass"]]
+data = flags[["Red", "Green", "Blue", "Gold",
+ "White", "Black", "Orange",
+ "Circles",
+"Crosses","Saltires","Quarters","Sunstars",
+"Crescent","Triangle"]]
+
+train_data, test_data, train_labels, test_labels = train_test_split(data, labels, random_state=1)
+
+
+scores = []
+for i in range(1, 20):
+  tree = DecisionTreeClassifier(random_state=1, max_depth=i)
+  tree.fit(train_data, train_labels)
+  score = tree.score(test_data, test_labels)
+  scores.append(score)
+
+  plt.plot(range(1, 21), scores)
+  plt.show()
+
+Project #43: Predicting Income with Random Forests
+income.py
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+from sklearn.ensemble import RandomForestClassifier
+income_data = pd.read_csv("income.csv", header = 0, delimiter = ", ")
+print(income_data.iloc[0])
+
+labels = income_data[["income"]]
+
+income_data["sex-int"] = income_data["sex"].apply(lambda row: 0 if row == "Male" else 1)
+
+income_data["country-int"] = income_data["native-country"].apply(lambda row: 0 if row == "United-States" else 1)
+
+data = income_data[["age", "capital-gain", "capital-loss", "hours-per-week", "sex-int", "country-int"]]
+
+train_data, test_data, train_labels, test_labels = train_test_split(data, labels, random_state = 1)
+
+forest = RandomForestClassifier(random_state = 1)
+
+forest.fit(train_data, train_labels)
+print(forest.score(test_data, test_labels))
+print(income_data["native-country"].value_counts())
+
+Project #44: Handwriting Recognition using K-Means
+script.py
+import codecademylib3_seaborn
+import numpy as np
+from matplotlib import pyplot as plt
+from sklearn import datasets
+from sklearn.cluster import KMeans
+
+digits = datasets.load_digits()
+
+model = KMeans(n_clusters=10, random_state=42)
+model.fit(digits.data)
+
+new_samples = np.array([
+
+
+[0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.98,5.79,5.79,4.27,2.22,0.08,0.00,0.99,7.32,6.33,5.72,7.39,7.62,3.21,0.00,3.97,7.61,0.91,0.00,0.32,6.33,6.86,0.23,5.26,6.25,0.00,0.00,0.00,2.97,7.62,1.29,4.88,7.17,0.53,0.00,0.00,3.58,7.62,0.84,1.91,7.47,5.73,1.45,2.59,7.17,6.10,0.00,0.00,2.97,7.17,7.62,7.62,6.17,1.07,0.00],
+
+[0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,1.45,1.76,0.00,0.00,0.00,0.00,0.00,0.00,5.34,6.10,0.00,0.00,3.13,1.23,0.00,0.00,5.95,5.49,0.00,0.00,7.62,3.81,0.00,0.00,6.71,4.80,0.00,0.00,7.62,5.72,1.99,0.00,6.48,6.56,4.73,6.57,7.62,7.55,4.11,0.00,2.52,6.10,6.10,5.95,7.62,2.82,0.00,0.00,0.00,0.00,0.00,1.52,7.62,2.28,0.00],
+
+[0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.08,3.43,4.50,4.57,5.66,6.33,6.71,1.22,0.38,6.48,6.86,6.86,6.11,6.64,7.62,1.13,0.00,0.00,0.00,0.00,0.46,7.16,5.33,0.00,0.00,0.00,0.00,0.00,4.19,7.55,1.30,0.00,0.00,0.00,0.00,1.30,7.55,4.88,0.00,0.00,0.00,0.00,0.00,4.73,7.40,0.76,0.00,0.00,0.00,0.00,0.46,7.47,4.65,0.00,0.00,0.00],
+
+[0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,2.52,4.12,0.00,0.00,4.12,2.52,0.00,0.00,4.57,6.86,0.00,0.00,6.86,4.57,0.00,0.00,4.57,6.94,0.76,0.76,6.94,4.88,0.76,0.00,3.88,7.62,7.62,7.62,7.62,7.62,7.62,2.59,0.54,2.29,2.29,2.29,7.10,5.80,2.29,0.31,0.00,0.00,0.00,0.00,6.71,5.17,0.00,0.00,0.00,0.00,0.00,0.00,6.18,3.12,0.00,0.00]
+
+
+
+
+])
+new_labels = model.predict(new_samples)
+for i in range(len(new_labels)):
+  if new_labels[i] == 0:
+    print(0, end='')
+  elif new_labels[i] == 1:
+    print(9, end='')
+  elif new_labels[i] == 2:
+    print(2, end='')
+  elif new_labels[i] == 3:
+    print(1, end='')
+  elif new_labels[i] == 4:
+    print(6, end='')
+  elif new_labels[i] == 5:
+    print(8, end='')
+  elif new_labels[i] == 6:
+    print(4, end='')
+  elif new_labels[i] == 7:
+    print(5, end='')
+  elif new_labels[i] == 8:
+    print(7, end='')
+  elif new_labels[i] == 9:
+    print(3, end='')
+print(new_labels)
+
+
+fig = plt.figure(figsize=(8, 3))
+ 
+fig.suptitle('Cluser Center Images', fontsize=14, fontweight='bold')
+
+for i in range(10):
+ 
+  # Initialize subplots in a grid of 2X5, at i+1th position
+  ax = fig.add_subplot(2, 5, 1 + i)
+ 
+  # Display images
+  ax.imshow(model.cluster_centers_[i].reshape((8, 8)), cmap=plt.cm.binary)
+plt.show()
+
+Project #45: Trends in Startups
+project.sqlite
+SELECT *
+FROM startups;
+
+SELECT COUNT(*)
+FROM startups;
+
+SELECT SUM(valuation)
+FROM startups;
+
+SELECT MAX(raised)
+FROM startups;
+
+SELECT MAX(raised)
+FROM startups
+WHERE stage = 'Seed';
+
+SELECT MIN(founded)
+FROM startups;
+
+SELECT AVG(valuation)
+FROM startups;
+
+SELECT category, AVG(valuation)
+FROM startups
+GROUP BY category;
+
+SELECT category, ROUND(AVG(valuation), 2)
+FROM startups
+GROUP BY category;
+
+SELECT category, ROUND(AVG(valuation), 2)
+FROM startups
+GROUP BY 1
+ORDER BY 2 DESC;
+
+SELECT category, COUNT(*)
+FROM startups
+GROUP BY category;
+
+SELECT category, COUNT(*)
+FROM startups
+GROUP BY category
+HAVING COUNT(*) > 3
+ORDER BY 2 DESC;
+
+SELECT location, AVG(employees)
+FROM startups
+GROUP BY location;
+
+SELECT location, AVG(employees)
+FROM startups
+GROUP BY location
+HAVING AVG(employees) > 500;
+
+Project #46: How to Hack Hacker News
+project.sqlite
+SELECT timestamp,
+strftime('%H', timestamp) AS hour,
+ROUND(AVG(score)) AS avg_score,
+COUNT(*) num_stories
+FROM hacker_news
+WHERE timestamp IS NOT NULL
+GROUP BY 1
+ORDER BY 2 DESC;
+
+Project #47: The Metropolitan Museum of Art
+project.sqlite
+ SELECT medium, COUNT(*)
+ FROM met
+ WHERE medium LIKE '%gold%'
+ OR medium LIKE '%silver%'
+ GROUP BY 1
+ ORDER BY 2 DESC;
+
+Project #48: Cryptocurrency Enchange
+project.sqlite
+SELECT date,
+ ROUND(AVG(money_in), 2),
+ ROUND(AVG(money_out), 2)
+ FROM transactions
+ GROUP BY date;
+
+Project #49: Lyft Trip Data
+test.sqlite
+SELECT * FROM trips;
+
+SELECT * FROM riders;
+
+SELECT * FROM cars;
+
+SELECT riders.first,
+riders.last,
+cars.model
+FROM riders, cars;
+
+SELECT *
+FROM trips
+LEFT JOIN riders
+ON trips.rider_id = riders.id;
+
+SELECT *
+FROM trips
+JOIN cars
+ON trips.car_id = cars.id;
+
+SELECT *
+FROM riders
+UNION
+SELECT *
+FROM riders2;
+
+SELECT ROUND(AVG(cost), 2)
+FROM trips;
+
+SELECT * 
+FROM riders
+WHERE total_trips < 500
+UNION
+SELECT *
+FROM riders2
+WHERE total_trips < 500;
+
+SELECT COUNT(*)
+FROM cars
+WHERE status = 'active';
+
+SELECT *
+FROM cars
+ORDER BY trips_completed DESC
+LIMIT 2;
+
+
